@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html ng-app='weather'>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Weather App</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div ng-controller='mainCtrl'>
+
+
+<div class="mainContainer">
+
+
+
+
+    <div class="weatherBox">
+        <input ng-model='zip' placeholder="type in zipcode" type="text">
+<br>
+        <div class="search">
+            <button ng-click='getWeather(zip)'>Search</button  >
+      </div>
+<br>
+          <div class="child">
+              The Weather in <span class="city">{{weather.name}}</span> is {{weather.main.temp}} °F
+          </div>
+
+
+    </div>
+
+
+
+
+
+
+
+</div>
+
+
+
+</div>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular.min.js"></script>
+<script src="app.js" charset="utf-8"></script>
+<script src="mainCtrl.js" charset="utf-8"></script>
+<script src="mainServices.js" charset="utf-8"></script>
+</body>
+</html>
